@@ -75,7 +75,7 @@ in_connections = Queue.Queue(maxsize=100)
 rooms = collections.OrderedDict()
 sockets = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ipadd = socket.gethostbyname(socket.gethostname())
-sockets.bind((ipadd, sys.argv[1]))
+sockets.bind((ipadd, int(sys.argv[1])))
 sockets.listen(5)
 
 while True:
